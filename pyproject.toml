@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hauserkennen"
+version = "0.1.0"
+description = "Gebäude zu Immobilienfotos finden: OSM-Kandidaten im Suchkreis + Bildvergleich mit Google Street View oder Mapillary"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "opencv-python-headless>=4.8",
+    "requests>=2.28",
+    "shapely>=2.0",
+]
+
+[project.optional-dependencies]
+overture = ["pyarrow>=14"]
+dev = ["pytest>=7", "pyarrow>=14"]
+
+[project.scripts]
+hauserkennen = "hauserkennen.__main__:main"
+
+[tool.setuptools]
+packages = ["hauserkennen"]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "tests"]
+testpaths = ["tests"]

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Ergebnisse, Cache und eigene Fotos nicht einchecken (Inseratsfotos sind urheberrechtlich geschützt,
+# Street-View-Bilder dürfen laut Google-Bedingungen nicht dauerhaft gespeichert/weitergegeben werden)
+ergebnis*/
+.hauserkennen-cache/
+fotos/
